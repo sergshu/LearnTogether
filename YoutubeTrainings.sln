@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1231
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParsingReadfootball", "ParsingReadfootball\ParsingReadfootball.csproj", "{54BC8658-DF99-4784-8301-59FF00CE0A88}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParsingBrowser", "ParsingBrowser\ParsingBrowser.csproj", "{DE66ED0C-9F32-4E51-B0E7-25047B2C1EA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankiRuJsonParsing", "BankiRuJsonParsing\BankiRuJsonParsing.csproj", "{091E2B1E-9EAA-4403-B195-446470C7FE87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{DE66ED0C-9F32-4E51-B0E7-25047B2C1EA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE66ED0C-9F32-4E51-B0E7-25047B2C1EA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE66ED0C-9F32-4E51-B0E7-25047B2C1EA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{091E2B1E-9EAA-4403-B195-446470C7FE87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{091E2B1E-9EAA-4403-B195-446470C7FE87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{091E2B1E-9EAA-4403-B195-446470C7FE87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{091E2B1E-9EAA-4403-B195-446470C7FE87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
