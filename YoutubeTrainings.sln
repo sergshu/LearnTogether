@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankiRuJsonParsing", "Banki
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBotIsSimple", "TelegramBotIsSimple\TelegramBotIsSimple.csproj", "{F44AF185-22C3-4D53-A3B7-8F6207BE701F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiServer", "ApiServer\ApiServer.csproj", "{C41D820F-D003-4B77-A876-8E2477640D7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F44AF185-22C3-4D53-A3B7-8F6207BE701F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F44AF185-22C3-4D53-A3B7-8F6207BE701F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F44AF185-22C3-4D53-A3B7-8F6207BE701F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C41D820F-D003-4B77-A876-8E2477640D7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C41D820F-D003-4B77-A876-8E2477640D7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C41D820F-D003-4B77-A876-8E2477640D7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C41D820F-D003-4B77-A876-8E2477640D7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
