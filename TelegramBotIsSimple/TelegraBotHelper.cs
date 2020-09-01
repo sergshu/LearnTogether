@@ -76,12 +76,18 @@ namespace TelegramBotIsSimple
                                 }
                                 else
                                 {
-                                    List<string> songs = GetSongsByAuthor(author: text);
-                                    if (songs != null && songs.Count > 0)
+                                    var songs = GetSongsByAuthor(author: text);
+
+                                    if (songs?.Item2 != null && songs.Item2.Count > 0)
                                     {
                                         state.State = State.SearchSong;
                                         state.Author = text;
-                                        _client.SendTextMessageAsync(update.Message.Chat.Id, "Введите название песни:", replyMarkup: getSongsButtons(songs));
+                                        imagePath = Path.Combine(Environment.CurrentDirectory, songs.Item1);
+                                        using (var stream = File.OpenRead(imagePath))
+                                        {
+                                            var r = _client.SendPhotoAsync(update.Message.Chat.Id, new Telegram.Bot.Types.InputFiles.InputOnlineFile(stream), caption: state.Author).Result;
+                                        }
+                                        _client.SendTextMessageAsync(update.Message.Chat.Id, "Введите название песни:", replyMarkup: getSongsButtons(songs.Item2));
                                     }
                                     else
                                     {
@@ -98,18 +104,19 @@ namespace TelegramBotIsSimple
                                 else
                                 {
                                     var songPath = getSongPath(text);
+                                    var songs2 = GetSongsByAuthor(author: state.Author);
                                     if (!string.IsNullOrEmpty(songPath) && File.Exists(songPath))
                                     {
-                                        List<string> songs2 = GetSongsByAuthor(author: state.Author);
+                                        _client.SendTextMessageAsync(update.Message.Chat.Id, "Песня загружается...");
+
                                         using (var stream = File.OpenRead(songPath))
                                         {
-                                            var r = _client.SendAudioAsync(update.Message.Chat.Id, new Telegram.Bot.Types.InputFiles.InputOnlineFile(stream), replyMarkup: getSongsButtons(songs2)).Result;
+                                            var r = _client.SendAudioAsync(update.Message.Chat.Id, new Telegram.Bot.Types.InputFiles.InputOnlineFile(stream), replyMarkup: getSongsButtons(songs2.Item2)).Result;
                                         }
                                     }
                                     else
                                     {
-                                        List<string> songs2 = GetSongsByAuthor(author: state.Author);
-                                        _client.SendTextMessageAsync(update.Message.Chat.Id, "Ничего не найдено\nВведите название песни:", replyMarkup: getSongsButtons(songs2));
+                                        _client.SendTextMessageAsync(update.Message.Chat.Id, "Ничего не найдено\nВведите название песни:", replyMarkup: getSongsButtons(songs2.Item2));
                                     }
                                 }
                                 break;
@@ -205,12 +212,12 @@ namespace TelegramBotIsSimple
             };
         }
 
-        private List<string> GetSongsByAuthor(string author)
+        private Tuple<string, List<string>> GetSongsByAuthor(string author)
         {
             //TODO: Get songs from DB
             if (author.Equals(TEXT_AUTORS_ADELE))
             {
-                return new List<string> { TXT_SONG_SET_FIRE };
+                return new Tuple<string, List<string>>(Path.Combine(Environment.CurrentDirectory, "adele.png"), new List<string> { TXT_SONG_SET_FIRE });
             }
 
             return null;
