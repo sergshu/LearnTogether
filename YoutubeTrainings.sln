@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBotIsSimple", "Tele
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiServer", "ApiServer\ApiServer.csproj", "{C41D820F-D003-4B77-A876-8E2477640D7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiServerTestForm", "ApiServerTestForm\ApiServerTestForm.csproj", "{36AB8F7B-06F4-4116-9156-F7A707C867D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C41D820F-D003-4B77-A876-8E2477640D7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C41D820F-D003-4B77-A876-8E2477640D7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C41D820F-D003-4B77-A876-8E2477640D7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36AB8F7B-06F4-4116-9156-F7A707C867D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36AB8F7B-06F4-4116-9156-F7A707C867D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36AB8F7B-06F4-4116-9156-F7A707C867D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36AB8F7B-06F4-4116-9156-F7A707C867D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -34,6 +35,68 @@ namespace ApiServer.Controllers
         public async Task<IHttpActionResult> PostData([FromBody] string[] data)
         {
             return Ok(new { date = DateTime.Now, data });
+        }
+
+        [AcceptVerbs("POST")]
+        [Route("UploadFile")]
+        public async Task<IHttpActionResult> UploadFile()
+        {
+            try
+            {
+                MultipartMemoryStreamProvider provider = new MultipartMemoryStreamProvider();
+                await Request.Content.ReadAsMultipartAsync(provider);
+
+                if(provider.Contents != null && provider.Contents.Count > 0)
+                {
+                    foreach(var cont in provider.Contents)
+                    {
+                        if(!string.IsNullOrEmpty( cont.Headers.ContentDisposition.FileName))
+                        {
+                           var fileName = cont.Headers.ContentDisposition.FileName;
+
+                            var saveDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files");
+                            if(!Directory.Exists(saveDir))
+                            {
+                                Directory.CreateDirectory(saveDir);
+                            }
+
+                            var filePath = Path.Combine(saveDir, fileName);
+                            if(File.Exists(filePath))
+                            {
+                                File.Delete(filePath);
+                            }
+
+                            var bites = await cont.ReadAsByteArrayAsync();
+                            if(bites != null && bites.Length > 0)
+                            {
+                                using (var streamMemory = new MemoryStream(bites))
+                                {
+                                    streamMemory.Seek(0, SeekOrigin.Begin);
+                                    using(var fileStream = File.Create(filePath))
+                                    {
+                                        streamMemory.CopyTo(fileStream);
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                return Ok(new { message = "File Empty" });
+                            }
+                        }
+                        else
+                        {
+                            return Ok(new { message = "No file name" });
+                        }
+                    }
+
+                    return Ok(new { message = "Success" });
+                }
+                else
+                {
+                    return Ok(new { message = "Not found" });
+                }
+            }
+            catch (Exception ex) { return InternalServerError(ex); }
         }
     }
 }
