@@ -16,14 +16,21 @@ namespace BankiRuJsonParsing
                 var resultat = GetData(url: "https://www.banki.ru/products/currency/usd/");
                 if(resultat != null)
                 {
+#if FORM
+                    var form = new Form1(resultat.candles.data.Select(r => new CandleData(r)));
+                    form.ShowDialog();
+#else
                     Console.WriteLine(string.Join("\t", resultat.candles.columns));
                     foreach (var row in resultat.candles.data)
                     {
                         Console.WriteLine(string.Join("\t", row));
                     }
+#endif
                 }
 
+#if !FORM
                 Console.ReadKey();
+#endif
             }
             catch (Exception ex) { Console.WriteLine(ex.Message); }
         }
