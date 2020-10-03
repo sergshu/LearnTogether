@@ -19,17 +19,18 @@ namespace TelegramBotModerator
 
         private void ucStartStop1_Start(object sender, EventArgs e)
         {
-
+            Task.Run(() => BO.TelegramHelper.Start());
         }
 
-        private void ucStartStop1_Stop(object sender, EventArgs e)
+        private async void ucStartStop1_Stop(object sender, EventArgs e)
         {
+            await BO.TelegramHelper.Stop();
             ucStartStop1.Init();
         }
 
         private void btnAddWord_Click(object sender, EventArgs e)
         {
-            if(!string.IsNullOrWhiteSpace(txtNewWord.Text))
+            if (!string.IsNullOrWhiteSpace(txtNewWord.Text))
             {
                 BO.WordsHelper.AddWord(txtNewWord.Text);
                 bindingSource1.ResetBindings(false);
@@ -40,7 +41,7 @@ namespace TelegramBotModerator
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if(lbWords.SelectedItem != null)
+            if (lbWords.SelectedItem != null)
             {
                 BO.WordsHelper.DeleteWord(lbWords.SelectedItem.ToString());
                 bindingSource1.ResetBindings(false);
@@ -71,7 +72,7 @@ namespace TelegramBotModerator
 
         private void txtNewWord_KeyUp(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 btnAddWord_Click(null, null);
             }
