@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiServerTestForm", "ApiSer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBotModerator", "TelegramBotModerator\TelegramBotModerator.csproj", "{3E85F2C0-16B4-4B75-8E8F-5D3FF4017CEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsService1", "WindowsService1\WindowsService1.csproj", "{AA526D64-441D-44E6-84FC-4CB2BF15EAFE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{3E85F2C0-16B4-4B75-8E8F-5D3FF4017CEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E85F2C0-16B4-4B75-8E8F-5D3FF4017CEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E85F2C0-16B4-4B75-8E8F-5D3FF4017CEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA526D64-441D-44E6-84FC-4CB2BF15EAFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA526D64-441D-44E6-84FC-4CB2BF15EAFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA526D64-441D-44E6-84FC-4CB2BF15EAFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA526D64-441D-44E6-84FC-4CB2BF15EAFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
