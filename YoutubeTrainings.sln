@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBotModerator", "Tel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsService1", "WindowsService1\WindowsService1.csproj", "{AA526D64-441D-44E6-84FC-4CB2BF15EAFE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncForm", "AsyncForm\AsyncForm.csproj", "{292CCD98-C3BC-4BE5-82C6-F6634383D883}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{AA526D64-441D-44E6-84FC-4CB2BF15EAFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA526D64-441D-44E6-84FC-4CB2BF15EAFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA526D64-441D-44E6-84FC-4CB2BF15EAFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{292CCD98-C3BC-4BE5-82C6-F6634383D883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{292CCD98-C3BC-4BE5-82C6-F6634383D883}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{292CCD98-C3BC-4BE5-82C6-F6634383D883}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{292CCD98-C3BC-4BE5-82C6-F6634383D883}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
