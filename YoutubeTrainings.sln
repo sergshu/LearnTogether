@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsService1", "WindowsS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncForm", "AsyncForm\AsyncForm.csproj", "{292CCD98-C3BC-4BE5-82C6-F6634383D883}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoSqlite", "AdoSqlite\AdoSqlite.csproj", "{018C6FAE-E2D8-49DB-93A9-62F38D274614}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{292CCD98-C3BC-4BE5-82C6-F6634383D883}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{292CCD98-C3BC-4BE5-82C6-F6634383D883}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{292CCD98-C3BC-4BE5-82C6-F6634383D883}.Release|Any CPU.Build.0 = Release|Any CPU
+		{018C6FAE-E2D8-49DB-93A9-62F38D274614}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{018C6FAE-E2D8-49DB-93A9-62F38D274614}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{018C6FAE-E2D8-49DB-93A9-62F38D274614}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{018C6FAE-E2D8-49DB-93A9-62F38D274614}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
