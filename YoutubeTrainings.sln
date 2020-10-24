@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncForm", "AsyncForm\Asyn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoSqlite", "AdoSqlite\AdoSqlite.csproj", "{018C6FAE-E2D8-49DB-93A9-62F38D274614}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelTest", "ExcelTest\ExcelTest.csproj", "{88135927-D110-44CB-8ED6-F2E0442BEC46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{018C6FAE-E2D8-49DB-93A9-62F38D274614}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{018C6FAE-E2D8-49DB-93A9-62F38D274614}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{018C6FAE-E2D8-49DB-93A9-62F38D274614}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88135927-D110-44CB-8ED6-F2E0442BEC46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88135927-D110-44CB-8ED6-F2E0442BEC46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88135927-D110-44CB-8ED6-F2E0442BEC46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88135927-D110-44CB-8ED6-F2E0442BEC46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
