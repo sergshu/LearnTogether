@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoSqlite", "AdoSqlite\AdoS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelTest", "ExcelTest\ExcelTest.csproj", "{88135927-D110-44CB-8ED6-F2E0442BEC46}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{485BD625-EA4A-4C16-A2F0-AF84DB7FD3BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{88135927-D110-44CB-8ED6-F2E0442BEC46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88135927-D110-44CB-8ED6-F2E0442BEC46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88135927-D110-44CB-8ED6-F2E0442BEC46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{485BD625-EA4A-4C16-A2F0-AF84DB7FD3BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{485BD625-EA4A-4C16-A2F0-AF84DB7FD3BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{485BD625-EA4A-4C16-A2F0-AF84DB7FD3BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{485BD625-EA4A-4C16-A2F0-AF84DB7FD3BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
