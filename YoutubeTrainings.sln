@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelTest", "ExcelTest\Exce
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{485BD625-EA4A-4C16-A2F0-AF84DB7FD3BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{9655DE39-12FE-4866-A841-26C444AA066D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{485BD625-EA4A-4C16-A2F0-AF84DB7FD3BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{485BD625-EA4A-4C16-A2F0-AF84DB7FD3BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{485BD625-EA4A-4C16-A2F0-AF84DB7FD3BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9655DE39-12FE-4866-A841-26C444AA066D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9655DE39-12FE-4866-A841-26C444AA066D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9655DE39-12FE-4866-A841-26C444AA066D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9655DE39-12FE-4866-A841-26C444AA066D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

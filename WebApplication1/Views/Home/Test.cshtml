@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Test";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model WebApplication1.Models.TestModel
+
+<h2>Test</h2>
+@if (string.IsNullOrEmpty(Model.Result))
+{
+    <form method="post" action="@Url.Action("Test", "Home")">
+        @Html.TextBoxFor((m) => m.Text)
+        <br />
+        @Html.DropDownListFor((m) => m.Selected, Model.Items.Select(i => new SelectListItem { Text = $"Iten N{i}", Value = i }))
+        <br />
+        <input type="submit" value="Post Form" />
+        <br />
+    </form>
+}
+else
+{
+    @Html.DisplayTextFor((m) => m.Result)
+    <br />
+
+
+    @Html.ActionLink("Refresh", "Test", "Home")
+}
+
+@if (Model.MyItems != null)
+{
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>User Name</td>
+            </tr>
+        </thead>
+        @foreach(var item in Model.MyItems)
+        {
+            <tr>
+                <td>@Html.ActionLink(@item.Id.ToString(), "TestItemView", new { id = item.Id })</td>
+                <td>@item.Name</td>
+                <td>@item.UserName</td>
+            </tr>
+        }
+    </table>
+
+}
+
+
