@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{9655DE39-12FE-4866-A841-26C444AA066D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkSqliteCodeFirst", "EntityFrameworkSqliteCodeFirst\EntityFrameworkSqliteCodeFirst.csproj", "{4DC5D163-9C6F-46CA-AF18-DF6F0F2ECD37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{9655DE39-12FE-4866-A841-26C444AA066D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9655DE39-12FE-4866-A841-26C444AA066D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9655DE39-12FE-4866-A841-26C444AA066D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DC5D163-9C6F-46CA-AF18-DF6F0F2ECD37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DC5D163-9C6F-46CA-AF18-DF6F0F2ECD37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DC5D163-9C6F-46CA-AF18-DF6F0F2ECD37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DC5D163-9C6F-46CA-AF18-DF6F0F2ECD37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
