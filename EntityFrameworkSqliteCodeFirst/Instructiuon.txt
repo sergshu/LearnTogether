@@ -1,0 +1,39 @@
+﻿Prj: EntityFrameworkSqliteCodeFirst
+
+Nuget:
+System.Data.SQLite
+SQLite.CodeFirst
+System.Data.SQLite.EF6.Migrations
+
+
+Add clases:
+- MyDbContext
+- Configuration
+- MyDbContextInitializer +?? override void Seed(MyDbContext context)
+- Person
+
+
+App.config:
++ <providers>
+<provider invariantName="System.Data.SQLite" type="System.Data.SQLite.EF6.SQLiteProviderServices, System.Data.SQLite.EF6, Version=1.0.113.0, Culture=neutral" />
++ <system.data><DbProviderFactories>
+      <remove invariant="System.Data.SQLite" />
+      <add name="SQLite Data Provider" invariant="System.Data.SQLite" description=".NET Framework Data Provider for SQLite" type="System.Data.SQLite.SQLiteFactory, System.Data.SQLite" />
+
+<connectionStrings>    <add name="MyDbContext" connectionString="data source=.\MyDB.sqlite" providerName="System.Data.SQLite" />  </connectionStrings>
+
+
+PM-Console:
+Enable-Migrations
+
+?? create SQLiteConfiguration
+create Migrations\Configuration
+
+Change Migrations\Configuration
+add row
+            SetSqlGenerator("System.Data.SQLite", new SQLiteMigrationSqlGenerator());
+
+add-migration init
+update-database
+
+
