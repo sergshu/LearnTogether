@@ -71,7 +71,10 @@
     <Compile Include="Data\Configuration.cs" />
     <Compile Include="Data\MyDbContext.cs" />
     <Compile Include="Data\MyDbContextInitializer.cs" />
+    <Compile Include="Data\Tables\Order.cs" />
     <Compile Include="Data\Tables\Person.cs" />
+    <Compile Include="Data\Tables\Role.cs" />
+    <Compile Include="Data\Tables\TableExtensions.cs" />
     <Compile Include="Migrations\202101091219224_init.cs" />
     <Compile Include="Migrations\202101091219224_init.designer.cs">
       <DependentUpon>202101091219224_init.cs</DependentUpon>
@@ -83,6 +86,10 @@
     <Compile Include="Migrations\202101091232159_added-Age.cs" />
     <Compile Include="Migrations\202101091232159_added-Age.designer.cs">
       <DependentUpon>202101091232159_added-Age.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101171241345_New Tables.cs" />
+    <Compile Include="Migrations\202101171241345_New Tables.designer.cs">
+      <DependentUpon>202101171241345_New Tables.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -101,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101091232159_added-Age.resx">
       <DependentUpon>202101091232159_added-Age.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101171241345_New Tables.resx">
+      <DependentUpon>202101171241345_New Tables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
