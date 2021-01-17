@@ -13,23 +13,24 @@ namespace AdoSqlite.DAL
         {
             try
             {
-                using(var connection = new SQLiteConnection(@"Data Source=db.sqlite;Version=3;"))
+                using (var connection = new SQLiteConnection(@"Data Source=db.sqlite;Version=3;"))
                 {
                     connection.Open();
 
-                    using(var cmd = new SQLiteCommand(@"SELECT id,
+                    using (var cmd = new SQLiteCommand(@"SELECT id,
        user_name,
        name,
        date_created
   FROM users;", connection))
                     {
-                        using(var rdr = cmd.ExecuteReader())
+                        using (var rdr = cmd.ExecuteReader())
                         {
                             List<User> users = new List<User>();
 
-                            while(rdr.Read())
+                            while (rdr.Read())
                             {
-                                users.Add(new User {
+                                users.Add(new User
+                                {
                                     Id = rdr.GetInt32(0),
                                     UserName = rdr.GetString(1),
                                     Name = rdr.GetString(2),
@@ -45,6 +46,76 @@ namespace AdoSqlite.DAL
             catch (Exception ex) { Console.WriteLine(ex.Message); }
 
             return null;
+        }
+
+        internal static bool AddUser(User user)
+        {
+            try
+            {
+                using (var connection = new SQLiteConnection(@"Data Source=db.sqlite;Version=3;"))
+                {
+                    connection.Open();
+
+                    using (var cmd = new SQLiteCommand($@"INSERT INTO users (
+                      user_name,
+                      name,
+                      date_created
+                  )
+                  VALUES (
+                      '{user.UserName}',
+                      '{user.Name}',
+                      '{user.Date:yyyy-MM-dd}');", connection))
+                    {
+                        var res = cmd.ExecuteNonQuery();
+                        return true;
+                    }
+                }
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+            return false;
+        }
+
+        internal static bool SaveUser(User user)
+        {
+            try
+            {
+                using (var connection = new SQLiteConnection(@"Data Source=db.sqlite;Version=3;"))
+                {
+                    connection.Open();
+
+                    using (var cmd = new SQLiteCommand($@"UPDATE users  
+SET
+user_name = '{user.UserName}',
+name = '{user.Name}',
+date_created = '{user.Date:yyyy-MM-dd}'
+WHERE id = {user.Id};", connection))
+                    {
+                        var res = cmd.ExecuteNonQuery();
+                        return true;
+                    }
+                }
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+            return false;
+        }
+
+        internal static bool DeleteUser(int id)
+        {
+            try
+            {
+                using (var connection = new SQLiteConnection(@"Data Source=db.sqlite;Version=3;"))
+                {
+                    connection.Open();
+
+                    using (var cmd = new SQLiteCommand($@"DELETE FROM users WHERE id = {id};", connection))
+                    {
+                        var res = cmd.ExecuteNonQuery();
+                        return true;
+                    }
+                }
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+            return false;
         }
     }
 }

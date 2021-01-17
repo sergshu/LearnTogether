@@ -75,6 +75,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ucUserEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucUserEdit.Designer.cs">
+      <DependentUpon>ucUserEdit.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +93,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ucUserEdit.resx">
+      <DependentUpon>ucUserEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="db.sqlite">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
