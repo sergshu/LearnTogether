@@ -21,7 +21,7 @@ namespace Lesson6
 
             foreach(var line in lines)
             {
-                var contact = Models.ContactModel.Create(line);
+                var contact = line.CreateContactModel();
                 if(contact != null)
                 {
                     list.Add(contact);
