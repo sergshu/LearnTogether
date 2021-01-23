@@ -4,39 +4,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lesson4
+namespace Lesson5
 {
-    class Program4
+    static class Extension
+    {
+        public static string GetPerimetr(this IPerimetr v)
+        {
+            return $"Perimetr = {v.Perimetr}";
+        }
+    }
+
+    interface IPerimetr
+    {
+        double Perimetr { get; }
+    }
+
+
+    class Program5
     {
         static void Main(string[] args)
         {
+            var list = new List<IPerimetr>
+            {
+                new Rectangle(5, 10),
+                new Triangle(5, 10),
+                new Square(5),
+                new TriangleTrivial(5, 3, 7),
+            };
 
-            var rectangle2 = new Rectange(5, 10);
-            //write(rectangle2.Area);
-            //write(rectangle2.GetDiagonal());
-
-
-            var triangle = new Triangle(5, 10);
-            //write(triangle.Area);
-            //write(triangle.GetDiagonal());
-
-            var square1 = new Square(5);
-
-            var list = new List<Figure> { rectangle2, triangle };
-            
-            list.Add(square1);
-
-            foreach(var o in list)
+            foreach (var o in list)
             {
                 write(o.ToString());
-                
+                write(o.GetPerimetr());
+
                 writeNewLine();
             }
 
-
-
             writeNewLine();
 
+            write(new Rectangle(5, 7).GetPerimetr());
 
             Console.WriteLine("Нажмите кнопку");
             Console.ReadKey();
@@ -53,7 +59,7 @@ namespace Lesson4
             public abstract double GetDiagonal();
         }
 
-        class Triangle : Rectange
+        class Triangle : Rectangle, IPerimetr
         {
             public Triangle(int v1, int v2) : base(v1, v2) { }
 
@@ -66,15 +72,17 @@ namespace Lesson4
             {
                 return $"Triangle Area={Area} Diagonal={GetDiagonal()}";
             }
+
+            public new double Perimetr => Lenght1 + Lenght2 + GetDiagonal();
         }
 
-        class Rectange : Figure
+        class Rectangle : Figure, IPerimetr
         {
-            public Rectange()
+            public Rectangle()
             {
             }
 
-            public Rectange(int v1, int v2)
+            public Rectangle(int v1, int v2)
             {
                 Lenght1 = v1;
                 Lenght2 = v2;
@@ -95,9 +103,11 @@ namespace Lesson4
             {
                 return $"Rectange Area={Area} Diagonal={GetDiagonal()}";
             }
+
+            public double Perimetr => Lenght1 * 2 + Lenght2 * 2;
         }
 
-        class Square : Rectange
+        class Square : Rectangle
         {
             public Square(int v) : base(v, v)
             {
@@ -109,6 +119,26 @@ namespace Lesson4
             }
         }
 
+        class TriangleTrivial : IPerimetr
+        {
+            public TriangleTrivial(int v1, int v2, int v3)
+            {
+                Lenght1 = v1;
+                Lenght2 = v2;
+                Lenght3 = v3;
+            }
+
+            public int Lenght1 { get; set; }
+            public int Lenght2 { get; set; }
+            public int Lenght3 { get; set; }
+
+            public double Perimetr => Lenght1 + Lenght2 + Lenght3;
+        }
+
+        private static void write(int v)
+        {
+            Console.WriteLine($"Value = {v}");
+        }
 
         private static void writeNewLine()
         {
@@ -118,21 +148,6 @@ namespace Lesson4
         private static void write(string v)
         {
             Console.WriteLine(v);
-        }
-
-        private static void write(int v)
-        {
-            Console.WriteLine($"Value = {v}");
-        }
-
-        private static void write(decimal v)
-        {
-            Console.WriteLine($"Value = {v}");
-        }
-
-        private static void write(double v)
-        {
-            Console.WriteLine($"D = {v}");
         }
     }
 }
