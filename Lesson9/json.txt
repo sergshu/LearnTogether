@@ -1,0 +1,5 @@
+﻿[
+{"currency_id":840,"date":1611954000,"value":76.2527,"ratio":1},
+{"currency_id":111,"date":1611954000,"value":76.2527,"ratio":1},
+{"currency_id":978,"date":1611954000,"value":92.2963,"ratio":1}
+]
