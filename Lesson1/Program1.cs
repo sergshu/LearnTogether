@@ -11,8 +11,8 @@ namespace Lesson1
         static void Main(string[] args)
         {
             int i;
-            decimal m = decimal.MaxValue;
-            var d = double.MinValue;
+            //decimal m = decimal.MaxValue;
+            //var d = double.MinValue;
 
             i = 5;
 

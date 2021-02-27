@@ -61,6 +61,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson13", "Lesson13\Lesson
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordsChanger", "WordsChanger\WordsChanger.csproj", "{B3280504-75FC-4D65-B920-66D3C2B6AFBD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YandexDiskApp", "YandexDiskApp\YandexDiskApp.csproj", "{21199BEF-E0F6-45F9-89AE-0A07372703F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -179,6 +181,10 @@ Global
 		{B3280504-75FC-4D65-B920-66D3C2B6AFBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3280504-75FC-4D65-B920-66D3C2B6AFBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3280504-75FC-4D65-B920-66D3C2B6AFBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21199BEF-E0F6-45F9-89AE-0A07372703F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21199BEF-E0F6-45F9-89AE-0A07372703F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21199BEF-E0F6-45F9-89AE-0A07372703F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21199BEF-E0F6-45F9-89AE-0A07372703F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
