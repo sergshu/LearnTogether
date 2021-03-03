@@ -52,6 +52,8 @@ namespace ExcelTest.BO
         {
             try
             {
+                // var val = ((Excel.Worksheet)_excel.ActiveSheet).Cells[row, column].Value2;
+
                 ((Excel.Worksheet)_excel.ActiveSheet).Cells[row, column] = data;
                 return true;
             }
@@ -64,6 +66,7 @@ namespace ExcelTest.BO
             try
             {
                 _workbook.Close();
+                _excel.Quit();
             }
             catch (Exception ex) { Console.WriteLine(ex.Message); }
         }
