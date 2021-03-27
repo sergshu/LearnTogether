@@ -74,5 +74,39 @@ namespace WordsChanger
 
             return false;
         }
+
+        internal List<string> ReadText()
+        {
+            Word.Application app = null;
+            try
+            {
+                app = new Word.Application();
+                Object file = _fileInfo.FullName;
+
+                Object missing = Type.Missing;
+
+                Word.Document doc = app.Documents.Open(file);
+                var list = new List<string>();
+
+                foreach(Word.Paragraph paragraph in doc.Paragraphs)
+                {
+                    list.Add(paragraph.Range.Text);
+                }
+
+                app.ActiveDocument.Close();
+
+                return list;
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+            finally
+            {
+                if (app != null)
+                {
+                    app.Quit();
+                }
+            }
+
+            return null;
+        }
     }
 }

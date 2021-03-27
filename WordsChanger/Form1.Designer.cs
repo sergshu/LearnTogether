@@ -45,6 +45,7 @@ namespace WordsChanger
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +70,7 @@ namespace WordsChanger
             this.tableLayoutPanel1.Controls.Add(this.dateTimePicker2, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.numericUpDown1, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.button1, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.button2, 0, 9);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -244,6 +246,16 @@ namespace WordsChanger
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(3, 213);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Load Data";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,6 +289,7 @@ namespace WordsChanger
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
