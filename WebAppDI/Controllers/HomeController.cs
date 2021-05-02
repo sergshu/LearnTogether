@@ -5,9 +5,11 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using WebAppDI.Data;
 using WebAppDI.Models;
+using WebAppDI.Services;
 
 namespace WebAppDI.Controllers
 {
@@ -16,17 +18,30 @@ namespace WebAppDI.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly LtContext _contex;
         private readonly IMapper _mapper;
+        private readonly IInitials _initials;
+        private readonly HttpClient _client;
 
-        public HomeController(ILogger<HomeController> logger, LtContext context, IMapper mapper)
+        public HomeController(
+            ILogger<HomeController> logger, 
+            LtContext context, 
+            IMapper mapper,
+            IInitials initials,
+            IHttpClientFactory clientFactory)
         {
             _logger = logger;
             _contex = context;
             _mapper = mapper;
+            _initials = initials;
+            _client = clientFactory.CreateClient("client1");
         }
 
         public IActionResult Index()
         {
             var model = new IndexModel { TestItems = _mapper.Map<List<TestItemView>>(_contex.TestItems.ToList()) };
+            foreach(var item in model.TestItems)
+            {
+                item.Initials = _initials.Get(item);
+            }
             return View(model);
         }
 
