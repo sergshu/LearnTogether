@@ -67,7 +67,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson14", "Lesson14\Lesson
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson15", "Lesson15\Lesson15.csproj", "{B61BC233-1D62-486F-99DA-3BF8FBFBBBDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppDI", "WebAppDI\WebAppDI.csproj", "{D3DC2C41-5741-4C22-9FA6-0376B1F4AB02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAppDI", "WebAppDI\WebAppDI.csproj", "{D3DC2C41-5741-4C22-9FA6-0376B1F4AB02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
