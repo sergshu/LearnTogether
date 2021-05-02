@@ -27,6 +27,8 @@ namespace WebAppDI
             services.AddDbContext<LtContext>(options =>
     options.UseSqlServer(Configuration.GetConnectionString("LearningTogether")));
 
+            services.AddAutoMapper(this.GetType().Assembly);
+
             services.AddControllersWithViews();
         }
 

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebAppDI.Data;
 using WebAppDI.Models;
-using WebAppDI.Views;
 
 namespace WebAppDI.Controllers
 {
@@ -15,16 +15,18 @@ namespace WebAppDI.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly LtContext _contex;
+        private readonly IMapper _mapper;
 
-        public HomeController(ILogger<HomeController> logger, LtContext context)
+        public HomeController(ILogger<HomeController> logger, LtContext context, IMapper mapper)
         {
             _logger = logger;
             _contex = context;
+            _mapper = mapper;
         }
 
         public IActionResult Index()
         {
-            var model = new IndexModel {  TestItems = _contex.TestItems.ToList() };
+            var model = new IndexModel { TestItems = _mapper.Map<List<TestItemView>>(_contex.TestItems.ToList()) };
             return View(model);
         }
 

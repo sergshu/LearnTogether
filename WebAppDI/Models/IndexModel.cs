@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebAppDI.Data;
 
-namespace WebAppDI.Views
+namespace WebAppDI.Models
 {
     public class IndexModel
     {
-        public List<TestItem> TestItems { get; set; }
+        public List<TestItemView> TestItems { get; set; }
     }
 }
