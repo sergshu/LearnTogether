@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using YandexDisk.Client.Clients;
 using YandexDisk.Client.Http;
 using YandexDisk.Client.Protocol;
@@ -12,14 +13,31 @@ namespace YandexDiskApp
 {
     class Program
     {
+        [STAThread]
         static void Main(string[] args)
         {
+            var form = new OAuthAutorization();
+            form.ClientId = "****";
+
+            Application.Run(form);
+
+            if(form.Success && !string.IsNullOrEmpty(form.Token))
+            {
+                write($"Token {form.Token}");
+                Console.ReadKey();
+                return;
+            }
+            else
+            {
+                throw new Exception("Not found");
+            }
+
             Task.Run(async () =>
                 {
                     try
                     {
                         //http://localhost:12345/callback#access_token=****************&token_type=bearer&expires_in=31536000
-                        var api = new DiskHttpApi("****************");
+                        var api = new DiskHttpApi(form.Token);
 
                         var rootFolderData = await api.MetaInfo.GetInfoAsync(new ResourceRequest
                         {
