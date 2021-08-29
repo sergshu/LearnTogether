@@ -61,6 +61,16 @@ namespace ExcelTest.BO
             return false;
         }
 
+        internal object Get(string column, int row)
+        {
+            try
+            {
+                return ((Excel.Worksheet)_excel.ActiveSheet).Cells[row, column].Value2;
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+            return null;
+        }
+
         public void Dispose()
         {
             try
