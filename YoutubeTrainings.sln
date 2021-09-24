@@ -75,6 +75,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson17", "Lesson17\Lesson
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpLoginSaveCookies", "HttpLoginSaveCookies\HttpLoginSaveCookies.csproj", "{FDFE9551-AB98-4E68-AD16-C1E452F4A503}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailSender", "MailSender\MailSender.csproj", "{8417D14E-F6E7-4E62-862D-BEF162777713}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -221,6 +223,10 @@ Global
 		{FDFE9551-AB98-4E68-AD16-C1E452F4A503}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDFE9551-AB98-4E68-AD16-C1E452F4A503}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDFE9551-AB98-4E68-AD16-C1E452F4A503}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8417D14E-F6E7-4E62-862D-BEF162777713}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8417D14E-F6E7-4E62-862D-BEF162777713}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8417D14E-F6E7-4E62-862D-BEF162777713}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8417D14E-F6E7-4E62-862D-BEF162777713}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
