@@ -59,5 +59,11 @@ namespace MailSender
             }
             catch (Exception ex) { }
         }
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            var list = getMails();
+            bindingSource1.DataSource = list;
+        }
     }
 }
