@@ -30,7 +30,11 @@ namespace WordsChanger
             try
             {
                 app = new Word.Application();
-                Object file = _fileInfo.FullName;
+
+                string newFileName = Path.Combine(_fileInfo.DirectoryName, DateTime.Now.ToString("yyyyMMdd HHmmss ") + _fileInfo.Name);
+                File.Copy(_fileInfo.FullName, newFileName);
+
+                Object file = newFileName;
 
                 Object missing = Type.Missing;
 
@@ -57,8 +61,7 @@ namespace WordsChanger
                         ReplaceWith: missing, Replace: replace);
                 }
 
-                Object newFileName = Path.Combine(_fileInfo.DirectoryName, DateTime.Now.ToString("yyyyMMdd HHmmss ") + _fileInfo.Name);
-                app.ActiveDocument.SaveAs2(newFileName);
+                app.ActiveDocument.Save();
 
                 if (showPreview)
                 {
