@@ -20,7 +20,7 @@ namespace WordsChanger
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var helper = new WordHelper("blank-zayavleniya-o-priyome-na-rabotu.doc");
+            _helper = new WordHelper("blank-zayavleniya-o-priyome-na-rabotu.doc");
 
             var items = new Dictionary<string, string>
             {
@@ -33,7 +33,7 @@ namespace WordsChanger
                 { "<DATE>" , dateTimePicker2.Value.ToString("dd.MM.yyyy") },
             };
 
-            helper.Process(items);
+            _helper.Process(items, chkShowPreview.Checked);
         }
 
         Regex _regTo = new Regex(@"КОМУ (?<ORG>.+)", RegexOptions.Compiled | RegexOptions.Singleline);
@@ -41,6 +41,7 @@ namespace WordsChanger
         Regex _regBody = new Regex(@"в качестве (?<PROF>.+)\s+с\s+(?<DATE_FROM>[0-9]+\.[0-9]+\.[0-9]+)", RegexOptions.Compiled | RegexOptions.Singleline);
         Regex _regRow = new Regex(@"С испытательным сроком (?<MONTHS>[0-9]+) месяца и окладом (?<SALARY>.+)рублей", RegexOptions.Compiled | RegexOptions.Singleline);
         Regex _regDate = new Regex(@"(?<DATE>[0-9]+\.[0-9]+\.[0-9]+)", RegexOptions.Compiled | RegexOptions.Singleline);
+        private WordHelper _helper;
 
         private void button2_Click(object sender, EventArgs e)
         {

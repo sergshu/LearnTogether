@@ -24,7 +24,7 @@ namespace WordsChanger
             }
         }
 
-        internal bool Process(Dictionary<string, string> items)
+        internal bool Process(Dictionary<string, string> items, bool showPreview)
         {
             Word.Application app = null;
             try
@@ -59,14 +59,23 @@ namespace WordsChanger
 
                 Object newFileName = Path.Combine(_fileInfo.DirectoryName, DateTime.Now.ToString("yyyyMMdd HHmmss ") + _fileInfo.Name);
                 app.ActiveDocument.SaveAs2(newFileName);
-                app.ActiveDocument.Close();
+
+                if (showPreview)
+                {
+                    app.Visible = true;
+                    app.ActiveDocument.PrintPreview();
+                }
+                else
+                {
+                    app.ActiveDocument.Close();
+                }
 
                 return true;
             }
             catch(Exception ex) { Console.WriteLine(ex.Message); }
             finally
             {
-                if (app != null)
+                if (app != null && !showPreview)
                 {
                     app.Quit();
                 }

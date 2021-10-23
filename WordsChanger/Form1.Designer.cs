@@ -46,8 +46,11 @@ namespace WordsChanger
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.chkShowPreview = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -69,8 +72,8 @@ namespace WordsChanger
             this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.dateTimePicker2, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.numericUpDown1, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.button2, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 9);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -238,7 +241,7 @@ namespace WordsChanger
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(149, 213);
+            this.button1.Location = new System.Drawing.Point(79, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
@@ -256,6 +259,34 @@ namespace WordsChanger
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.button1, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.chkShowPreview, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(149, 213);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(501, 34);
+            this.tableLayoutPanel2.TabIndex = 6;
+            // 
+            // chkShowPreview
+            // 
+            this.chkShowPreview.AutoSize = true;
+            this.chkShowPreview.Checked = true;
+            this.chkShowPreview.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkShowPreview.Location = new System.Drawing.Point(3, 3);
+            this.chkShowPreview.Name = "chkShowPreview";
+            this.chkShowPreview.Padding = new System.Windows.Forms.Padding(3);
+            this.chkShowPreview.Size = new System.Drawing.Size(70, 23);
+            this.chkShowPreview.TabIndex = 5;
+            this.chkShowPreview.Text = "Preview";
+            this.chkShowPreview.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,6 +298,8 @@ namespace WordsChanger
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -290,6 +323,8 @@ namespace WordsChanger
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.CheckBox chkShowPreview;
     }
 }
 
