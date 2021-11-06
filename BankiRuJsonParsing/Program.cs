@@ -11,6 +11,12 @@ namespace BankiRuJsonParsing
     {
         static void Main(string[] args)
         {
+            System.Net.ServicePointManager.SecurityProtocol =
+                System.Net.SecurityProtocolType.Tls12
+                | System.Net.SecurityProtocolType.Ssl3
+                | System.Net.SecurityProtocolType.Tls
+                | System.Net.SecurityProtocolType.Tls11;
+
             try
             {
                 var resultat = GetData(url: "https://www.banki.ru/products/currency/usd/");
@@ -73,7 +79,7 @@ namespace BankiRuJsonParsing
                         clnt.DefaultRequestHeaders.Add("Connection", "keep-alive");
                         clnt.DefaultRequestHeaders.Add("Referer", url);
 
-                        using (var resp = clnt.GetAsync("https://www.banki.ru/moex/iss/engines/currency/markets/selt/securities/USD000UTSTOM/candles.json?from=2020-08-21&interval=1&start=0").Result)
+                        using (var resp = clnt.GetAsync($"https://www.banki.ru/moex/iss/engines/currency/markets/selt/securities/USD000UTSTOM/candles.json?from={DateTime.Now.AddDays(-1):yyyy-MM-dd}&interval=1&start=0").Result)
                         {
                             if (resp.IsSuccessStatusCode)
                             {
