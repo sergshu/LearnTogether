@@ -79,6 +79,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailSender", "MailSender\Ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleSheets", "GoogleSheets\GoogleSheets.csproj", "{37AB889C-A5F7-448F-AA97-853254988D57}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfViewer", "PdfViewer\PdfViewer.csproj", "{86FB7F3B-5F16-473E-BD0E-9850EB3E39E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -233,6 +235,10 @@ Global
 		{37AB889C-A5F7-448F-AA97-853254988D57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37AB889C-A5F7-448F-AA97-853254988D57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37AB889C-A5F7-448F-AA97-853254988D57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86FB7F3B-5F16-473E-BD0E-9850EB3E39E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86FB7F3B-5F16-473E-BD0E-9850EB3E39E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86FB7F3B-5F16-473E-BD0E-9850EB3E39E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86FB7F3B-5F16-473E-BD0E-9850EB3E39E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
