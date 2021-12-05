@@ -8,3 +8,21 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<table>
+    <tr>
+        <th>Date</th>
+        <th>TemperatureC</th>
+        <th>TemperatureF</th>
+        <th>Summary</th>
+    </tr>
+    @foreach(var i in Model.Weather)
+            {
+    <tr>
+        <td>@i.Date</td>
+        <td>@i.TemperatureC</td>
+        <td>@i.TemperatureF</td>
+        <td>@i.Summary</td>
+    </tr>
+            }
+</table>
