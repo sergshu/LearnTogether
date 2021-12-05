@@ -79,7 +79,7 @@ namespace BankiRuJsonParsing
                         clnt.DefaultRequestHeaders.Add("Connection", "keep-alive");
                         clnt.DefaultRequestHeaders.Add("Referer", url);
 
-                        using (var resp = clnt.GetAsync($"https://www.banki.ru/moex/iss/engines/currency/markets/selt/securities/USD000UTSTOM/candles.json?from={DateTime.Now.AddDays(-1):yyyy-MM-dd}&interval=1&start=0").Result)
+                        using (var resp = clnt.GetAsync($"https://www.banki.ru/moex/iss/engines/currency/markets/selt/securities/USD000UTSTOM/candles.json?from={DateTime.Now.AddDays(-2):yyyy-MM-dd}&interval=1&start=0").Result)
                         {
                             if (resp.IsSuccessStatusCode)
                             {
