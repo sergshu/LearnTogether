@@ -85,11 +85,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson19Streams", "Lesson19
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Swagger", "Swagger", "{18D4B930-4A85-46EA-AB57-9D71A22ABFF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSwaggerApi", "TestSwaggerApi\TestSwaggerApi.csproj", "{B28CDE0F-368A-4F46-BBBB-E1C88F9169F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestSwaggerApi", "TestSwaggerApi\TestSwaggerApi.csproj", "{B28CDE0F-368A-4F46-BBBB-E1C88F9169F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSwaggerApi.Client", "TestSwaggerApi.Client\TestSwaggerApi.Client.csproj", "{433D4874-C87E-410B-B2B6-ABB5AE7F0577}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestSwaggerApi.Client", "TestSwaggerApi.Client\TestSwaggerApi.Client.csproj", "{433D4874-C87E-410B-B2B6-ABB5AE7F0577}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSwaggerApi.WEB", "TestSwaggerApi.WEB\TestSwaggerApi.WEB.csproj", "{8F62F6E4-9489-4A1B-9A92-CB4EC079A423}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestSwaggerApi.WEB", "TestSwaggerApi.WEB\TestSwaggerApi.WEB.csproj", "{8F62F6E4-9489-4A1B-9A92-CB4EC079A423}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttributeUsage", "AttributeUsage\AttributeUsage.csproj", "{C86FD4C3-E0BF-47A8-B6AF-A3DDB3C1442D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -265,6 +267,10 @@ Global
 		{8F62F6E4-9489-4A1B-9A92-CB4EC079A423}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F62F6E4-9489-4A1B-9A92-CB4EC079A423}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F62F6E4-9489-4A1B-9A92-CB4EC079A423}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C86FD4C3-E0BF-47A8-B6AF-A3DDB3C1442D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C86FD4C3-E0BF-47A8-B6AF-A3DDB3C1442D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C86FD4C3-E0BF-47A8-B6AF-A3DDB3C1442D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C86FD4C3-E0BF-47A8-B6AF-A3DDB3C1442D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
