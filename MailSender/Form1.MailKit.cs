@@ -54,12 +54,13 @@ namespace MailSender
 
                     var uids = client.Inbox.Search(SearchQuery.SentSince(DateTime.Now.AddDays(-7)));
 
-                    var messages = client.Inbox.Fetch(uids, MessageSummaryItems.Envelope | MessageSummaryItems.BodyStructure);
+                    var messages = client.Inbox.Fetch(uids, MessageSummaryItems.Full );
 
                     if (messages != null && messages.Count > 0)
                     {
                         foreach(var msg in messages)
                         {
+                            // var body = client.Inbox.GetBodyPart(msg.UniqueId, msg.BodyParts.First());
                             list.Add(new MailListItem
                             {
                                 Date = msg.Date.ToString(),

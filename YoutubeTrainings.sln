@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30413.136
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParsingReadfootball", "ParsingReadfootball\ParsingReadfootball.csproj", "{54BC8658-DF99-4784-8301-59FF00CE0A88}"
 EndProject
@@ -94,6 +94,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttributeUsage", "AttributeUsage\AttributeUsage.csproj", "{C86FD4C3-E0BF-47A8-B6AF-A3DDB3C1442D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QrCodeRW", "QrCodeRW\QrCodeRW.csproj", "{DE15F898-E04F-4906-B277-22854F41BC15}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetCore6", "NetCore6", "{62914DD5-FFC6-4425-BEF7-F4CB900A2BB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppAutorization", "WebAppAutorization\WebAppAutorization.csproj", "{4B200263-404A-40B4-8718-CBD84FD4EF25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -277,6 +281,10 @@ Global
 		{DE15F898-E04F-4906-B277-22854F41BC15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE15F898-E04F-4906-B277-22854F41BC15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE15F898-E04F-4906-B277-22854F41BC15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B200263-404A-40B4-8718-CBD84FD4EF25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B200263-404A-40B4-8718-CBD84FD4EF25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B200263-404A-40B4-8718-CBD84FD4EF25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B200263-404A-40B4-8718-CBD84FD4EF25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -303,6 +311,7 @@ Global
 		{B28CDE0F-368A-4F46-BBBB-E1C88F9169F3} = {18D4B930-4A85-46EA-AB57-9D71A22ABFF2}
 		{433D4874-C87E-410B-B2B6-ABB5AE7F0577} = {18D4B930-4A85-46EA-AB57-9D71A22ABFF2}
 		{8F62F6E4-9489-4A1B-9A92-CB4EC079A423} = {18D4B930-4A85-46EA-AB57-9D71A22ABFF2}
+		{4B200263-404A-40B4-8718-CBD84FD4EF25} = {62914DD5-FFC6-4425-BEF7-F4CB900A2BB9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {29702265-C159-48CA-A066-6F28C344E43E}

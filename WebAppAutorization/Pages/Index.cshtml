@@ -1,0 +1,23 @@
+﻿@page
+@using Microsoft.AspNetCore.Identity
+@using WebAppAutorization.Data.Identity
+@inject SignInManager<ApplicationIdentityUser> SignInManager
+
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <span>Logged In</span>
+}
+else
+{
+    <span>NOT Logged In</span>
+}
