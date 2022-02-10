@@ -54,36 +54,42 @@ namespace MailSender
 
                     var uids = client.Inbox.Search(SearchQuery.SentSince(DateTime.Now.AddDays(-7)));
 
-                    var messages = client.Inbox.Fetch(uids, MessageSummaryItems.Full );
+                    var messages = client.Inbox.Fetch(uids, MessageSummaryItems.Full);
 
                     if (messages != null && messages.Count > 0)
                     {
-                        foreach(var msg in messages)
+                        foreach (var msg in messages)
                         {
-                            var body = client.Inbox.GetBodyPart(msg.UniqueId, msg.BodyParts.First());
+                            var textPart = msg.BodyParts.First(b => b.ContentType.MediaType == "text");
+                            MimeKit.TextPart body = null;
+                            if (textPart != null)
+                            {
+                                body = client.Inbox.GetBodyPart(msg.UniqueId, msg.BodyParts.First()) as MimeKit.TextPart;
+                            }
+
                             list.Add(new MailListItem
                             {
                                 Date = msg.Date.ToString(),
                                 From = msg.Envelope.From.ToString(),
                                 Subj = msg.Envelope.Subject,
                                 HasAttachments = msg.Attachments != null && msg.Attachments.Count() > 0,
-                                Body = body is MimeKit.TextPart ? ((MimeKit.TextPart)body).Text : null,
+                                Body = body?.Text,
                             });
 
-                            foreach(var att in msg.Attachments.OfType<BodyPartBasic>())
+                            foreach (var att in msg.Attachments.OfType<BodyPartBasic>())
                             {
                                 var part = (MimePart)client.Inbox.GetBodyPart(msg.UniqueId, att);
 
                                 var pathDir = Path.Combine(Environment.CurrentDirectory, "Emails", msg.UniqueId.ToString());
-                                if(!Directory.Exists(pathDir))
+                                if (!Directory.Exists(pathDir))
                                 {
                                     Directory.CreateDirectory(pathDir);
                                 }
 
                                 var path = Path.Combine(pathDir, part.FileName);
-                                if(!File.Exists(path))
+                                if (!File.Exists(path))
                                 {
-                                    using(var strm = File.Create(path))
+                                    using (var strm = File.Create(path))
                                     {
                                         part.Content.DecodeTo(strm);
                                     }
