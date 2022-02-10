@@ -60,13 +60,14 @@ namespace MailSender
                     {
                         foreach(var msg in messages)
                         {
-                            // var body = client.Inbox.GetBodyPart(msg.UniqueId, msg.BodyParts.First());
+                            var body = client.Inbox.GetBodyPart(msg.UniqueId, msg.BodyParts.First());
                             list.Add(new MailListItem
                             {
                                 Date = msg.Date.ToString(),
                                 From = msg.Envelope.From.ToString(),
                                 Subj = msg.Envelope.Subject,
                                 HasAttachments = msg.Attachments != null && msg.Attachments.Count() > 0,
+                                Body = body is MimeKit.TextPart ? ((MimeKit.TextPart)body).Text : null,
                             });
 
                             foreach(var att in msg.Attachments.OfType<BodyPartBasic>())
