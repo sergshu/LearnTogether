@@ -55,6 +55,13 @@ namespace WebAppAutorization.Pages.Students
                 return Page();
             }
 
+            if (Student.Deleted)
+            {
+                ModelState.AddModelError("Student.Deleted", "Could not be deleted");
+                ModelState.AddModelError("", "Student Could not be deleted");
+                return Page();
+            }
+
             var student = _mapper.Map<Student>(Student);
             _context.Attach(student).State = EntityState.Modified;
 
