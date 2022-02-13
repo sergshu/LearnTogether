@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using WebAppAutorization.Data;
 using WebAppAutorization.Data.Identity;
 using WebAppAutorization.Services.Email;
+using FluentValidation.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,11 @@ builder.Services.AddTransient<IEmailSender, EmailSender>();
 builder.Services.AddRazorPages();
 
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
+
+builder.Services.AddFluentValidation(ce =>
+{
+    ce.RegisterValidatorsFromAssembly(typeof(Program).Assembly);
+});
 
 var app = builder.Build();
 

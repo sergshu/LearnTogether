@@ -3,21 +3,26 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using WebAppAutorization.Data;
 using WebAppAutorization.Data.Identity;
+using WebAppAutorization.Models;
 
 namespace WebAppAutorization.Pages.Students
 {
     public class CreateModel : PageModel
     {
         private readonly WebAppAutorization.Data.ApplicationDbContext _context;
+        private readonly IMapper _mapper;
 
-        public CreateModel(WebAppAutorization.Data.ApplicationDbContext context)
+        public CreateModel(ApplicationDbContext context,
+            IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         public IActionResult OnGet()
@@ -26,7 +31,7 @@ namespace WebAppAutorization.Pages.Students
         }
 
         [BindProperty]
-        public Student Student { get; set; }
+        public CreateStudentModel Student { get; set; }
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
@@ -36,7 +41,9 @@ namespace WebAppAutorization.Pages.Students
                 return Page();
             }
 
-            _context.Students.Add(Student);
+            var student = _mapper.Map<Student>(Student);
+
+            _context.Students.Add(student);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
