@@ -97,7 +97,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QrCodeRW", "QrCodeRW\QrCode
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetCore6", "NetCore6", "{62914DD5-FFC6-4425-BEF7-F4CB900A2BB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppAutorization", "WebAppAutorization\WebAppAutorization.csproj", "{4B200263-404A-40B4-8718-CBD84FD4EF25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAppAutorization", "WebAppAutorization\WebAppAutorization.csproj", "{4B200263-404A-40B4-8718-CBD84FD4EF25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineParameters", "CommandLineParameters\CommandLineParameters.csproj", "{1EB55766-A39A-4675-BDED-D6C37E32AC46}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -285,6 +287,10 @@ Global
 		{4B200263-404A-40B4-8718-CBD84FD4EF25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B200263-404A-40B4-8718-CBD84FD4EF25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B200263-404A-40B4-8718-CBD84FD4EF25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EB55766-A39A-4675-BDED-D6C37E32AC46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EB55766-A39A-4675-BDED-D6C37E32AC46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EB55766-A39A-4675-BDED-D6C37E32AC46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EB55766-A39A-4675-BDED-D6C37E32AC46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -312,6 +318,7 @@ Global
 		{433D4874-C87E-410B-B2B6-ABB5AE7F0577} = {18D4B930-4A85-46EA-AB57-9D71A22ABFF2}
 		{8F62F6E4-9489-4A1B-9A92-CB4EC079A423} = {18D4B930-4A85-46EA-AB57-9D71A22ABFF2}
 		{4B200263-404A-40B4-8718-CBD84FD4EF25} = {62914DD5-FFC6-4425-BEF7-F4CB900A2BB9}
+		{1EB55766-A39A-4675-BDED-D6C37E32AC46} = {62914DD5-FFC6-4425-BEF7-F4CB900A2BB9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {29702265-C159-48CA-A066-6F28C344E43E}
